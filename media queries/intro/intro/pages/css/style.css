@@ -1,0 +1,15 @@
+.container {
+    height: 500px;
+}
+
+.box {
+    background-color: blue;
+    border: 3px snow;
+    height: 300px;
+}
+
+.nav-ul {
+    list-style-type: none;
+    display: flex;
+    font-size: 1.3rem;
+}

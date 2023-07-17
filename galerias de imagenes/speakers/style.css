@@ -1,0 +1,10 @@
+.contant-watsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.img-watsapp {
+    z-index: 2;
+    width: 50%;
+}

@@ -1,0 +1,40 @@
+.navbar-brand img {
+    width: 150px;
+}
+
+.carousel-inner .carousel-item {
+    height: 100vh;
+    position: relative;
+}
+
+.carousel-inner .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.8);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.222);
+    z-index: 1;
+}
+
+.overlay h1 {
+    font-size: 40px;
+    justify-content: center;
+}
+
+.overlay p {
+    font-size: 25px;
+}
+
+/* .item { */
+/* flex: 1 2 auto; */
+/* } */
+.logo-footer img {
+    width: 200px;
+}

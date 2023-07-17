@@ -1,0 +1,18 @@
+ .box {
+     width: 500px;
+     min-height: 200px;
+ }
+
+
+
+ .img1 {
+     object-fit: cover;
+ }
+
+ .img2 {
+     object-fit: contain;
+ }
+
+ .img3 {
+     object-fit: fill;
+ }

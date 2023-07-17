@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,500&display=swap');
+
+/* todos los import van aca arriba buena practica lo saque de
+gogle fonts para aplicar tipografia rega de css y ahi copio y en footer
+pongo ese estilo de letra pongo a footer la clase footer 
+no hay q usar tanty tipos de letras solo dos uno mejor*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* este es el truco para que cada rem valga 10px 
+en html font size de 62,5 o sea no html de 16  */
+html {
+    font-size: 62.5%;
+}
+
+/* z es el eje es el q le da la profundidad va en 
+diagonal .- el menu es el q va a estar encima
+el q dice top model .-cuando uno quiero q este por encima del otro y lo uni
+
+uso con cuando hay otro elemento con position como .target position2
+ si a una target le pongo 2 
+  entonces no me deja que se4 quede estatico el menu
+  con stiky en el menu indec mayor valor al elemento este encima de los demas */
+.header-nav {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+
+}
+
+/* llamamos a headernav nav para convertirlo en flexible */
+.header-nav nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8rem;
+    background: linear-gradient(90deg, rgba(214, 8, 231, 1) 0%,
+            rgba(15, 37, 39, 1) 13%, rgba(54, 217, 3, 0.9864320728291317) 35%,
+            rgba(55, 13, 224, 0.9528186274509804) 100%);
+
+
+}
+
+.header-nav img {
+    height: 5rem;
+}
+
+/* min height es el tamños de alto del main y en base a
+esto seran las tarjetas utilizo todoelaltodewidth */
+.main-content {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 3rem;
+    min-height: 100vh;
+}
+
+/* para q algo crexca o cambie forma es transfrom
+uso scale tarjeta normal es de uno por defexto transition
+la propiedad qe cambie es ahor transform */
+.target {
+    transform: scale(1);
+    transition: transform;
+    transition-duration: 1s;
+    display: flex;
+    /* es un item flexible la misma targeta puede ser un contenedor */
+    /* flexible porque esta dentro de un contenedor mainconten*/
+    width: 30rem;
+    min-height: 40rem;
+    border-radius: 1rem;
+    box-shadow: 2px 1px 15px -1px #000000;
+    margin: 2rem;
+
+}
+
+.target:hover {
+    transform: scale(1.1);
+    transition: transform;
+    transition-duration: 1s;
+}
+
+/* truco par q 1rem vale 10px con html fontsize de 625 */
+/* utilizo el align self porq la tarjeta es un contendedor flexible */
+.target img {
+
+    filter: grayscale(1);
+    align-self: center;
+    width: 100%;
+    transition-property: filter;
+    transition-duration: 1s;
+    /* el hover es seudoclase y va con:raton por encima */
+}
+
+/* el filter es para sacarle el color y 0 es para volver color */
+.target img:hover {
+    filter: grayscale(0);
+    transition-property: filter;
+    transition-duration: 1s;
+    /* transition es para que cuando me acerque vuelva el color
+o cuando me aleje se haga gris filter es lo que modifico
+y le tengo q decir cuanto durara con transi duration */
+}
+
+.fixed {
+    position: fixed;
+    bottom: 5rem;
+    right: 0;
+}
+
+.fixed img {
+    height: 8rem;
+}
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    font-family: 'Ubuntu', sans-serif;
+    background: linear-gradient(90deg, rgba(214, 8, 231, 1) 0%,
+            rgba(15, 37, 39, 1) 13%, rgba(54, 217, 3, 0.9864320728291317) 35%,
+            rgba(55, 13, 224, 0.9528186274509804) 100%);
+    min-height: 8rem;
+    font-size: 1.6rem;
+    color: aliceblue;
+    font-weight: bold;
+    /* font weight bold es para poner en cursiva o negrita */
+}
+
+/* enlance para comunicarse por wasap web etiqueta ancla pra
+poner httpp */
+/* fixed es elemento que me quita espacio delotor elemento */

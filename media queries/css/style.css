@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* la fuente q agregamos en html fontfamily queda ya como unica
+por defecto podemos ponerla tambien en el selector universal
+* o en el body */
+.html {
+    font-size: 62.5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+        Verdana, sans-serif;
+
+}
+
+.header-title {
+    background: rgb(228, 139, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 30rem;
+    color: rgb(188, 225, 225);
+
+}
+
+.header-title h3 {
+    font-size: 5rem;
+
+}
+
+.header-title p {
+    font-size: 3rem;
+}
+
+/* menu navar hedear nav es la clase */
+.header-nav {
+    background-color: black;
+    color: blue;
+    font-size: 2rem;
+}
+
+/* display flex porq tiene varios elementos q moveremos */
+.menu-items {
+    min-height: 6rem;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: space-around;
+    align-items: center;
+    /* opcion una arriba de otra es con flex direction */
+    /* le sacamos los circulo de opcion con liststyletype none */
+}
+
+
+/* align self este es para mover solo el elemento dentro de contenedor
+al boton btn la hamburguesa
+aqui llamamos directamente al id con numeralbtn-show */
+#btn-show {
+    align-self: flex-end;
+    margin: 1rem;
+}
+
+/*  */
+
+#menu-hide {
+    width: 100%;
+    padding: 1rem;
+    display: none;
+    /* display none es para q e se oculte menu las opciones
+    y cuando toco el boton aparece */
+}
+
+.header-nav-item {
+    width: 100%;
+    text-align: center;
+    height: 6rem;
+    padding: 2rem;
+}
+
+/* a cada uno de los item de la lista le aplico hover el raton movible */
+.header-nav-item:hover {
+    background-color: rgb(68, 67, 65, green, blue, alpha);
+
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+.about {
+    width: 100%;
+    padding: 2rem;
+    background-color: rgb(127, 127, 58);
+}
+
+.about h3 {
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+
+.about-img {
+    width: 100%;
+    height: 40rem;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.about p {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+.content {
+    width: 100%;
+    padding: 2rem;
+
+}
+
+.content h3 {
+    margin: 2rem 0;
+    font-size: 3rem;
+}
+
+.content-img img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.content p {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+
+.footer {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10rem;
+    background-color: rgb(68, 67, 65,
+            green, blue, alpha)
+}
+
+.redes {
+    padding: 1rem;
+}
+
+.redes img {
+    width: 4rem;
+
+}
+
+.redes a {
+    width: 4rem;
+}
+
+@media (min-width:390px) {
+
+    #menu-show:hover #menu-hide {
+        display: flex;
+    }
+}
+
+@media(min-width:768) {
+    #btn-show {
+        display: none;
+    }
+
+
+
+
+    #menu hide {
+        display: flex;
+    }
+
+    body {
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100vh;
+
+    }
+
+
+    .menu-items {
+        flex-direction: row;
+    }
+
+    #menu-hide {
+        display: flex;
+    }
+
+    #btn-show {
+        display: none;
+    }
+
+    .main-container {
+        flex-direction: row;
+        flex-grow: 1;
+        /* flex grow es para dar a un elemento qu crezca */
+    }
+
+    .about {
+        width: 30%;
+    }
+
+    .about-img {
+        height: 20rem;
+    }
+
+
+
+
+}
+
+/* las media queria solo elijo la propiedad que quierocambie */
+@media(min-width:1024) {
+    .about-img {
+        height: 40rem;
+    }
+
+    .content-img {
+        height: 40rem;
+    }
+}

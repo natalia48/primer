@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* en un container ponemos display flex para trabajar con flexbox 
+viw es ellaltooancho de lapantalla*/
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; esto es por defectosolo ponemos wrap */
+    flex-wrap: wrap;
+    /* flex-flow: row-reverse wrap; */
+    justify-content: space-evenly;
+    align-items: center;
+    /* aligncontent es el eje vertical es como el justifyconten */
+    /* el align it esta en el eje secundario y le tengo q poner unalto heig
+    si el eje principal es el vertical pongo widgt 100vw y utilizo
+    justify conten es horizontal y alignes para el vertical  */
+}
+
+/* jutify mueve elemento en el eje prin */
+/* tbse usa flexflow y pone,mos los dos */
+/* con flex wrapwrap las cajas se acomodan a la pantalla pero no
+se deforma permanece igual se acomodan abajo */
+/* no hace falta el flex direction row por defexto lo acomoda asi
+peeoro si en columna */
+/* con flex el contenedor se acomoda ala pantalla el display es bloxxk 
+por defecto uno abajo del oto si habilito flex se aco.oda una al lado
+de la otra por defexto  es sienpre row pero row reverse deja un espacio
+e invierte el orden column se acomoda en columna o reverse invertidos*/
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #28D69A;
+    margin: 10px;
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.box2 {
+    flex-grow: 1;
+}
+
+/* alien sekf acomoda al hijo al iten dentro del conteiner */
+/* q crezca un valor mas el 1 mide 650 esta viendo el espacio disponible
+y le da ese espacio a la caja 2 conflex grow 1 representa un espacio
+mas q el resto si pongo 2 ocupa mas el espacio q tiene */

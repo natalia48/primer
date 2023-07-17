@@ -1,0 +1,28 @@
+.text-justify {
+    text-align: justify;
+}
+
+.logo-footer {
+    width: 200px;
+}
+
+.logo-footer img {
+    width: 100%;
+}
+
+.card-speakears img {
+    height: 300px;
+    object-fit: cover;
+    object-position: top;
+}
+
+.content-wasap {
+    justify-self: unset;
+    margin-left: 0;
+    z-index: 2;
+}
+
+.img .content-wasap {
+    max-height: 1px;
+
+}
